@@ -1,0 +1,7 @@
+.LeftMenu{
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}

@@ -1,0 +1,50 @@
+.Login{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.greet-div p{
+    margin-top: 0;
+}
+.f p{
+    margin-bottom: 0;
+}
+.form{
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+}
+.greet-div{
+    height: min-content;
+}
+.img{
+    max-height: 1em;
+    max-width: 1em;
+}
+.inp-cont{
+    display: flex;
+    width: 20rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.logo{
+    text-shadow: -1px 1px 7px rgba(66,86,174,0.68);
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    grid-column: 1;
+    grid-row: 1;
+}
+.log-cont{
+    display: block;
+    border: solid 1px gray;
+    border-radius: 10px;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    
+}

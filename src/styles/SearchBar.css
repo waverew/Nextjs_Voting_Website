@@ -1,0 +1,22 @@
+.SearchBar{
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 25% 1fr 1fr;
+
+}
+.search{
+    grid-row: 2;
+    grid-column: span 3;
+}
+.search input{
+    height: 2rem;
+    width: 100%;
+    border-radius: 15px;
+}
+.wel-back{
+    grid-row: 3;
+    grid-column: span 2;
+    
+}

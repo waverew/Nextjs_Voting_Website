@@ -1,0 +1,72 @@
+.group-img{
+    position: absolute;
+    max-width: 40%;
+    max-height: 40%;
+    right: 0rem;
+    bottom: 12rem;
+    z-index: 2;
+}
+.ellipse1{
+    position: absolute;
+    max-width: 35%;
+    right: 0rem;
+    bottom: 20rem;
+}
+.ellipse2{
+    position: absolute;
+    max-width: 40%;
+    right: 0rem;
+    bottom: 0rem;
+}
+.ellipse3{
+    position: absolute;
+    max-width: 35%;
+    right: 20rem;
+    bottom: 15rem;
+}
+.ch1{
+    position: absolute;
+    max-height: 10rem;
+    right: 15rem;
+    top: 5rem;
+}
+.ch2{
+    position: absolute;
+    max-height: 10rem;
+    right: 4rem;
+    top: 4rem;
+    
+}
+.ch3{
+    position: absolute;
+    max-height: 10rem;
+    right: 25rem;
+    top: 4rem;
+}
+.ch4{
+    position: absolute;
+    max-height: 10vh;
+    right: 19rem;
+    top: 8rem;
+    z-index: 2;
+}
+.ch5{
+    position: absolute;
+    max-height: 11vh;
+    right: 19rem;
+    top: 7.5rem;
+}
+.ch6{
+    position: absolute;
+    max-height: 10vh;
+    right: 6rem;
+    top: 6rem;
+}
+.ch7{
+    position: absolute;
+    right: 8rem;
+    top: 7rem;
+}
+.rect{
+    max-width: 5%;
+}

@@ -1,0 +1,10 @@
+.LeftMenuItem{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+.img{
+    max-width: 2rem;
+
+}

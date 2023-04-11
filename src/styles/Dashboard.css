@@ -1,0 +1,15 @@
+.Dashboard{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+}
+.menu{
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+}

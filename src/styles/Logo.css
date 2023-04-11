@@ -1,0 +1,11 @@
+.Logo{
+    text-shadow: -1px 1px 7px rgba(66,86,174,0.68);
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    grid-column: 1;
+    grid-row: 1;
+}
+.Logo label{
+    color:rgba(2, 0, 72, 0.743);
+}

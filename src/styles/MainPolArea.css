@@ -1,0 +1,22 @@
+.MainPolArea{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 19% 31% 19% 31%;
+    grid-row: 2;
+    grid-column: span 2;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    column-span: 2;
+}
+.final-pol{
+    display: flex;
+    grid-row: 2;
+
+}
+.recent-pol{
+    display: flex;
+    grid-row: 4;
+}
+.ab{
+    grid-row: 3;
+}

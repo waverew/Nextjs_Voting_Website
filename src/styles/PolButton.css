@@ -1,0 +1,10 @@
+.PolButton{
+    background-color: #9653FF;
+    border-radius: 1em;
+    height: 2rem;
+    width: 10rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
