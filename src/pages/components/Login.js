@@ -17,9 +17,12 @@ const Login = () => {
           </div>
           <form
             onSubmit={() => {
-              console.log("hi");
+              console.log("a");
             }}
+            action="http://localhost:3000/api/login"
             className="f"
+            method="post"
+            target="_self"
           >
             <div className="log-cont">
               <Input
