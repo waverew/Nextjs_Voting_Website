@@ -16,6 +16,7 @@ import '@/styles/VoteActivity.css';
 import "@/styles/LeftMenu.css";
 import '@/styles/LeftMenuItem.css';
 import "@/styles/Plus.css";
+import "@/styles/Register.css";
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
 }

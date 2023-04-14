@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     Object.values(ge.val()).includes(username) &&
     Object.values(ge.val()).includes(password)
   ) {
-    res.redirect("../dashboard");
+    res.status(200).redirect("../dashboard");
   }
   /*if(username == "bebra@g.com" && password == "bebra"){
         res.redirect('../dashboard');
