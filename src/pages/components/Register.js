@@ -25,6 +25,13 @@ const Register = () => {
           >
             <div className="log-cont">
               <Input
+                text="Name"
+                type="text"
+                name="name"
+                src="./img/login/body.png"
+                alt=""
+              />
+              <Input
                 text="Username"
                 type="email"
                 name="username"
@@ -38,13 +45,6 @@ const Register = () => {
                 src="./img/login/V4ector.png"
                 alt=""
               ></Input>
-              <Input
-                text="Name"
-                type="text"
-                name="name"
-                src="./img/login/V4ector.png"
-                alt=""
-              />
             </div>
             <div className="inp-cont">
               <Button text="Register" type="submit"></Button>
