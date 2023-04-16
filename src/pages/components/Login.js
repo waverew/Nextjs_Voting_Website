@@ -1,4 +1,3 @@
-
 import RightLoginSide from "./RightLoginSide";
 import Button from "./Button";
 import Input from "./Input";
@@ -7,7 +6,7 @@ const Login = () => {
   return (
     <div className="Login">
       <RightLoginSide></RightLoginSide>
-        <Logo></Logo>
+      <Logo></Logo>
       <div className="form">
         <div className="form-cont">
           <div className="greet-div">
@@ -27,8 +26,8 @@ const Login = () => {
             <div className="log-cont">
               <Input
                 text="Username"
-                type="email"
-                name="username"
+                type="text"
+                name="text"
                 src="./img/login/hector.png"
                 alt=""
               />
@@ -48,7 +47,14 @@ const Login = () => {
               <Button text="Login" type="submit"></Button>
             </div>
           </form>
-          <Button func={() => {window.location.href="/dashboard"}}/>
+          <div className="reg-cont">
+            <Button
+              func={() => {
+                window.location.href = "/register";
+              }}
+              text="Register"
+            />
+          </div>
         </div>
       </div>
     </div>

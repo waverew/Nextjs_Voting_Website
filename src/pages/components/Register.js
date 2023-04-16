@@ -33,8 +33,15 @@ const Register = () => {
               />
               <Input
                 text="Username"
-                type="email"
+                type="text"
                 name="username"
+                src="./img/login/body.png"
+                alt=""
+              />
+              <Input
+                text="Email"
+                type="email"
+                name="email"
                 src="./img/login/hector.png"
                 alt=""
               />
@@ -46,7 +53,7 @@ const Register = () => {
                 alt=""
               ></Input>
             </div>
-            <div className="inp-cont">
+            <div className="reg-cont">
               <Button text="Register" type="submit"></Button>
             </div>
           </form>

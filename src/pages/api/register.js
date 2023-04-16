@@ -1,9 +1,16 @@
 import { db } from "../../firebase";
 import { ref, get, set } from "firebase/database";
 export default async function handler(req, res) {
-  const { username, password, name } = req.body;
+  const { email, password, name, username } = req.body;
   const re = ref(db, "user");
   const ge = await get(re);
-  set();
+  const updateData = ge.val();
+  updateData[username] = {
+    email: email,
+    password: password,
+    name: name,
+  };
+
+  set(re, updateData);
   res.status(300).send("no");
 }
