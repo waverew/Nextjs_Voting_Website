@@ -5,10 +5,9 @@ export default async function handler(req, res) {
   const re = ref(db, "user");
   const ge = await get(re);
   const updateData = ge.val();
-  
+
   // TODO: add check if account already exists
-
-
+  
   updateData[username] = {
     email: email,
     password: password,
@@ -16,5 +15,6 @@ export default async function handler(req, res) {
   };
 
   set(re, updateData);
+
   res.status(300).send("no");
 }

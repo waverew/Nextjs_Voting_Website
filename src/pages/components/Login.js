@@ -27,7 +27,7 @@ const Login = () => {
               <Input
                 text="Username"
                 type="text"
-                name="text"
+                name="username"
                 src="./img/login/hector.png"
                 alt=""
               />
