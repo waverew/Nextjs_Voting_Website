@@ -2,6 +2,7 @@ import RightLoginSide from "./RightLoginSide";
 import Button from "./Button";
 import Input from "./Input";
 import Logo from "./Logo";
+import SignIn from "./Signin";
 const Login = () => {
   return (
     <div className="Login">
@@ -55,6 +56,7 @@ const Login = () => {
               text="Register"
             />
           </div>
+          <SignIn></SignIn>
         </div>
       </div>
     </div>
