@@ -2,7 +2,27 @@ import Logo from "./Logo";
 import Input from "./Input";
 import Button from "./Button";
 import RightLoginSide from "./RightLoginSide";
+import { useState } from "react";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { app } from "@/firebase";
 const Register = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const auth = getAuth(app);
+  async function signUp() {
+    try {
+      const result = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      if (result.user != null) {
+        window.location.href = "/";
+      }
+    } catch (error) {
+      console.error(error.code, error.message);
+    }
+  }
   return (
     <div className="Register">
       <RightLoginSide />
@@ -14,36 +34,16 @@ const Register = () => {
             <br></br>
             <p>Please register</p>
           </div>
-          <form
-            onSubmit={() => {
-              console.log("a");
-            }}
-            action="http://localhost:3000/api/register"
-            className="f"
-            method="post"
-            target="_self"
-          >
+          <div className="f">
             <div className="log-cont">
-              <Input
-                text="Name"
-                type="text"
-                name="name"
-                src="./img/login/body.png"
-                alt=""
-              />
-              <Input
-                text="Username"
-                type="text"
-                name="username"
-                src="./img/login/body.png"
-                alt=""
-              />
               <Input
                 text="Email"
                 type="email"
-                name="email"
+                name="username"
                 src="./img/login/hector.png"
                 alt=""
+                value={email}
+                change={(e) => setEmail(e.target.value)}
               />
               <Input
                 text="Password"
@@ -51,12 +51,14 @@ const Register = () => {
                 name="password"
                 src="./img/login/V4ector.png"
                 alt=""
+                value={password}
+                change={(e) => setPassword(e.target.value)}
               ></Input>
             </div>
             <div className="reg-cont">
-              <Button text="Register" type="submit"></Button>
+              <Button text="Register" click={signUp}></Button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>

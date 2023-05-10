@@ -8,7 +8,7 @@ import EmailAuth from "./EmailAuth";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   return (
     <div className="Login">
       <RightLoginSide></RightLoginSide>
@@ -20,49 +20,16 @@ const Login = () => {
             <br></br>
             <p>Login to your account</p>
           </div>
-          <form
-            onSubmit={() => {
-              console.log("a");
-            }}
-            action="http://localhost:3000/api/login"
-            className="f"
-            method="post"
-            target="_self"
-          >
-            <div className="log-cont">
-              <Input
-                text="Username"
-                type="text"
-                name="username"
-                src="./img/login/hector.png"
-                alt=""
-              />
-              <Input
-                text="Password"
-                type="password"
-                name="password"
-                src="./img/login/V4ector.png"
-                alt=""
-              ></Input>
-            </div>
-            <div className="inp-cont">
-              <div>
-                <input type="checkbox"></input>
-                <label>Remember me</label>
-              </div>
-              <Button text="Login" type="submit"></Button>
-            </div>
-          </form>
+          <EmailAuth></EmailAuth>
           <div className="reg-cont">
             <Button
-              func={() => {
+              click={() => {
                 window.location.href = "/register";
               }}
               text="Register"
             />
           </div>
           <SignIn></SignIn>
-          <EmailAuth></EmailAuth>
         </div>
       </div>
     </div>
