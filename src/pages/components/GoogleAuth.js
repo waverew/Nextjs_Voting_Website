@@ -2,11 +2,15 @@ import {getAuth, signInWithPopup, GoogleAuthProvider} from "firebase/auth"
 import {app} from "../../firebase"
 import {FcGoogle} from 'react-icons/fc';
 const SignIn = () => {
-    const provider = new GoogleAuthProvider;
+    const provider = new GoogleAuthProvider();
     const auth = getAuth(app);
     async function signIn(){
-      const result = await signInWithPopup(auth, provider);
+        try{
+            const result = await signInWithPopup(auth, provider);
       console.log(result.user);
+        } catch (error){
+            console.error(error.code, error.message);
+        }
     }
 return (
     <div>

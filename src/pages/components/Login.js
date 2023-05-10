@@ -2,23 +2,13 @@ import RightLoginSide from "./RightLoginSide";
 import Button from "./Button";
 import Input from "./Input";
 import Logo from "./Logo";
-import SignIn from "./Signin";
+import SignIn from "./GoogleAuth";
 import { useState } from "react";
-import useAuth from "./EmailAuth";
+import EmailAuth from "./EmailAuth";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { signIn } = useAuth();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await signIn(email, password);
-      // Redirect or perform other actions after successful login
-    } catch (error) {
-      console.error("Error during sign-in:", error);
-    }
-  };
+  
   return (
     <div className="Login">
       <RightLoginSide></RightLoginSide>
@@ -72,6 +62,7 @@ const Login = () => {
             />
           </div>
           <SignIn></SignIn>
+          <EmailAuth></EmailAuth>
         </div>
       </div>
     </div>

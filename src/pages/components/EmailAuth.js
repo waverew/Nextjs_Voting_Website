@@ -1,37 +1,28 @@
-import { useState, useEffect } from "react";
-import { app } from "../../firebase";
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { app } from '../../firebase';
+import { useState } from 'react';
 
-const useAuth = () => {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+const EmailAuth = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const auth = getAuth(app);
 
-  useEffect(() => {
-    const unsubscribe = app.auth().onAuthStateChanged((user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-      setLoading(false);
-    });
+  async function signIn() {
+    try {
+      const result = await signInWithEmailAndPassword(auth, email, password);
+      console.log(result.user);
+    } catch (error) {
+      console.error(error.code, error.message);
+    }
+  }
 
-    return () => unsubscribe();
-  }, []);
-
-  const signIn = async (email, password) => {
-    await firebase.auth().signInWithEmailAndPassword(email, password);
-  };
-
-  const signOut = async () => {
-    await firebase.auth().signOut();
-  };
-
-  return {
-    user,
-    loading,
-    signIn,
-    signOut,
-  };
+  return (
+    <div>
+      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+      <button onClick={signIn}>Sign In</button>
+    </div>
+  );
 };
 
-export default useAuth;
+export default EmailAuth;
