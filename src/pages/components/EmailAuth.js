@@ -11,6 +11,9 @@ const EmailAuth = () => {
   async function signIn() {
     try {
       const result = await signInWithEmailAndPassword(auth, email, password);
+      if(result.user != null){
+        window.location.href = '/dashboard';
+      }
     } catch (error) {
       console.error(error.code, error.message);
     }

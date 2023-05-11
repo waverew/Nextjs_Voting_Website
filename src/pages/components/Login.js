@@ -8,7 +8,6 @@ import EmailAuth from "./EmailAuth";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   return (
     <div className="Login">
       <RightLoginSide></RightLoginSide>
