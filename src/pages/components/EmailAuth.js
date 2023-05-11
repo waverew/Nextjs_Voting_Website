@@ -15,7 +15,7 @@ const EmailAuth = () => {
         window.location.href = '/dashboard';
       }
     } catch (error) {
-      console.error(error.code, error.message);
+      window.alert(error.message);
     }
   }
 

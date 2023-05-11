@@ -1,6 +1,7 @@
 import {getAuth, signInWithPopup, GoogleAuthProvider} from "firebase/auth"
 import {app} from "../../firebase"
 import {FcGoogle} from 'react-icons/fc';
+import Button from "./Button";
 const SignIn = () => {
     const provider = new GoogleAuthProvider();
     const auth = getAuth(app);
@@ -14,7 +15,7 @@ const SignIn = () => {
     }
 return (
     <div>
-        <button onClick={signIn} style={{display:"flex", alignItems:"center"}}><FcGoogle/> signin</button>
+        <Button click={signIn} style={{display:"flex", height:"100%", alignItems:"center", justifyContent:"center"}} text={<FcGoogle/>}></Button>
     </div>
 )
 }
