@@ -21,6 +21,7 @@ const Login = () => {
           </div>
           <EmailAuth></EmailAuth>
           <div className="reg-cont">
+            <SignIn></SignIn>
             <Button
               click={() => {
                 window.location.href = "/register";
@@ -28,7 +29,6 @@ const Login = () => {
               text="Register"
             />
           </div>
-          <SignIn></SignIn>
         </div>
       </div>
     </div>
