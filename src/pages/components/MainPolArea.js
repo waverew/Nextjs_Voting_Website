@@ -22,8 +22,11 @@ const MainPolArea = () => {
       </div>
       <h2 className="ab">Recent Polling</h2>
       <div className="recent-pol">
-        <RecentPol name="Barbra" />
-        <RecentPol name="Megan" />
+      {data.map((item, index) => (
+        <div key={index}>
+          <RecentPol name={item.Name}/>
+        </div>
+      ))}
       </div>
     </div>
   );

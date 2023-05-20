@@ -9,17 +9,23 @@
     column-span: 2;
 }
 .final-pol{
+    width: 55rem;
     display: flex;
     grid-row: 2;
     overflow-x: scroll;
 }
-.final-pol::-webkit-scrollbar {
+.final-pol::-webkit-scrollbar{
+    width: 0; /* remove scrollbar space */
+    background: transparent; /* optional: just make scrollbar invisible */
+  }
+.recent-pol::-webkit-scrollbar{
     width: 0; /* remove scrollbar space */
     background: transparent; /* optional: just make scrollbar invisible */
   }
 .recent-pol{
     display: flex;
     grid-row: 4;
+    overflow-x: scroll;
 }
 .ab{
     grid-row: 3;
