@@ -11,8 +11,12 @@
 .final-pol{
     display: flex;
     grid-row: 2;
-
+    overflow-x: scroll;
 }
+.final-pol::-webkit-scrollbar {
+    width: 0; /* remove scrollbar space */
+    background: transparent; /* optional: just make scrollbar invisible */
+  }
 .recent-pol{
     display: flex;
     grid-row: 4;
